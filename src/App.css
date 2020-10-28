@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+:root {
+  --background: #111111;
+  --typograpy: #00b3ca;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: var(--background);
+  color: var(--typograpy);
+  font-family: "Nunito", sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 60vw;
+  margin: auto;
+  height: 100vh;
+}
+/* menu */
+.menu-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
 }
-
-.App-link {
-  color: #61dafb;
+.menu {
+  border: 2px solid var(--typograpy);
+  padding: 2rem;
+  border-radius: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.menu-button {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0rem;
+}
+.menu-button button {
+  background: transparent;
+  border: 1px solid var(--typograpy);
+  padding: 0.5rem 2rem;
+  color: var(--typograpy);
+  font: inherit;
+  border-radius: 5px;
+  outline: none;
+  font-weight: bold;
+}
+.menu-button button:hover {
+  cursor: pointer;
+  background: #ffffff0a;
+}
+/* game */
+.game-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.game-board-container {
+  height: 80%;
+  border: 2px solid var(--typograpy);
+  padding: 2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* letter tile */
+.letter-tile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.letter-tile {
+  border-bottom: 2px solid var(--typograpy);
+  padding: 0rem 0.5rem;
+  font-size: 1.5rem;
+  margin: 0rem 0.5rem;
+  height: 35px;
+  width: 40px;
+  text-align: center;
+}
+/* keyboard */
+.keyboard {
+  border: 2px solid var(--typograpy);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+.keyboard .top,
+.keyboard .middle,
+.keyboard .bottom {
+  display: flex;
+  justify-content: center;
+}
+.key {
+  background: none;
+  padding: 0.5rem;
+  color: var(--typograpy);
+  font: inherit;
+  border: 1px solid var(--typograpy);
+  border-radius: 5px;
+  margin: 0.5rem;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  outline: none;
+}
+.key:hover {
+  cursor: pointer;
+  background: #ffffff0a;
+}
+.key.disabled {
+  border-color: grey;
+  color: grey;
+}
+.key.disabled:hover {
+  cursor: default;
+  background: initial;
+}
+/* life */
+.life-status-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.life img {
+  max-width: 25px;
+  margin: 0.25rem;
 }
